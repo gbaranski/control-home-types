@@ -1,5 +1,5 @@
 {
-  "name": "@controlhome/types",
+  "name": "@gbaranski/types",
   "version": "1.0.0",
   "description": "Types for controlhome app and website",
   "main": "dist/index.js",
