@@ -1,6 +1,8 @@
 export enum Devices {
   Alarmclock = "Alarmclock",
   Watermixer = "Watermixer",
+  Gate = "Gate",
+  Garage = "Garage",
 }
 export enum LocalIpAddress {
   Alarmclock = "192.168.1.110",
