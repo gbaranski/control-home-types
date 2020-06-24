@@ -1,4 +1,4 @@
-export interface alarmclockData {
+export interface AlarmclockData {
   currentTime: string; // formatted HH/MM/SS
   alarmTime: string; // formatted HH/MM/SS
   remainingTime: string; // formatted HH/MM/SS
@@ -8,7 +8,7 @@ export interface alarmclockData {
   heatIndex: number;
 }
 
-export interface alarmclockHeaders {
+export interface AlarmclockHeaders {
   time: string; // formatted HH/MM/SS
   state: number; // 1 or 0
 }

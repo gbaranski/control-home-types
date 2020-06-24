@@ -1,4 +1,11 @@
-import { alarmclockData, alarmclockHeaders } from "./alarmclock";
-import { watermixerData } from "./watermixer";
+import { AlarmclockData, AlarmclockHeaders } from "./alarmclock";
+import { WatermixerData } from "./watermixer";
+import { Devices, LocalIpAddress } from "./other";
 
-export { alarmclockData, alarmclockHeaders, watermixerData };
+export {
+  AlarmclockData,
+  AlarmclockHeaders,
+  WatermixerData,
+  Devices,
+  LocalIpAddress,
+};
