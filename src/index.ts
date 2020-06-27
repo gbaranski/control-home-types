@@ -1,6 +1,6 @@
 import { AlarmclockData, AlarmclockHeaders } from "./alarmclock";
 import { WatermixerData } from "./watermixer";
-import { Devices, LocalIpAddress } from "./other";
+import { Devices, LocalIpAddress, TempArray } from "./other";
 
 export {
   AlarmclockData,
@@ -8,4 +8,5 @@ export {
   WatermixerData,
   Devices,
   LocalIpAddress,
+  TempArray,
 };
