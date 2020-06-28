@@ -9,7 +9,26 @@ export enum LocalIpAddress {
   Watermixer = "192.168.1.120",
 }
 
+export enum AlarmRequestType {
+  GET_DATA = "/getESPData",
+  GET_TEMP_ARRAY = "/getTempArray",
+  GET_DEVICE_STATE = "/isDown",
+  SET_TIME = "/setAlarm",
+  SWITCH_STATE = "/setAlarmState",
+  TEST_ALARM = "/testAlarm",
+}
+export enum WaterRequestType {
+  GET_DATA = "/getESPData",
+  START_MIXING = "/startMixing",
+}
+
 export interface TempArray {
   unixTime: number;
   temp: number;
+}
+export interface RequestHistory {
+  user: string;
+  requestType: AlarmRequestType | WaterRequestType;
+  date: Date;
+  ip: string;
 }
