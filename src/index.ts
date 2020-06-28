@@ -8,6 +8,7 @@ import {
   TempArray,
   RequestHistory,
   OtherRequestsType,
+  DeviceStatus,
 } from "./other";
 
 export {
@@ -21,4 +22,5 @@ export {
   TempArray,
   RequestHistory,
   OtherRequestsType,
+  DeviceStatus,
 };
