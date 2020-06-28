@@ -32,3 +32,6 @@ export interface RequestHistory {
   date: Date;
   ip: string;
 }
+export enum OtherRequestsType {
+  GET_DEVICES_STATUS = "/getDevicesStatus",
+}
