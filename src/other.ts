@@ -35,3 +35,10 @@ export interface RequestHistory {
 export enum OtherRequestsType {
   GET_DEVICES_STATUS = "/getDevicesStatus",
 }
+
+export interface DeviceStatus {
+  alarmclock: boolean;
+  watermixer: boolean;
+  gate: boolean;
+  garage: boolean;
+}
