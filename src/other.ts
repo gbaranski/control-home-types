@@ -28,9 +28,11 @@ export interface TempArray {
 }
 export interface RequestHistory {
   user: string;
-  requestType: AlarmRequestType | WaterRequestType;
+  requestPath: string;
   date: Date;
   ip: string;
+  userAgent: string;
+  country: string;
 }
 export enum OtherRequestsType {
   GET_DEVICES_STATUS = "/getDevicesStatus",
