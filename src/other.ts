@@ -29,11 +29,12 @@ export interface TempArray {
 export interface RequestHistory {
   user: string;
   requestPath: string;
-  date: Date;
+  unixTime: number;
   ip: string;
   userAgent: string;
   country: string;
 }
+
 export enum OtherRequestsType {
   GET_DEVICES_STATUS = "/getDevicesStatus",
 }
