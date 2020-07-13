@@ -1,9 +1,9 @@
-export enum Devices {
-  Alarmclock = "Alarmclock",
-  Watermixer = "Watermixer",
-  Gate = "Gate",
-  Garage = "Garage",
-}
+export const DevicesList: string[] = [
+  'alarmclock',
+  'watermixer',
+  'gate',
+  'garage',
+]
 export enum LocalIpAddress {
   Alarmclock = "192.168.1.110",
   Watermixer = "192.168.1.120",
