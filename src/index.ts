@@ -1,14 +1,14 @@
-import { AlarmclockData, AlarmclockHeaders } from "./alarmclock";
-import { WatermixerData } from "./watermixer";
+import { AlarmclockData, AlarmclockHeaders, alarmclockSampleData } from "./alarmclock";
+import { WatermixerData, watermixerSampleData } from "./watermixer";
 import {
   Devices,
+  devicesSample,
   LocalIpAddress,
   AlarmRequestType,
   WaterRequestType,
   TempArray,
   RequestHistory,
   OtherRequestsType,
-  DeviceStatus,
 } from "./other";
 
 export {
@@ -22,5 +22,7 @@ export {
   TempArray,
   RequestHistory,
   OtherRequestsType,
-  DeviceStatus,
+  devicesSample,
+  alarmclockSampleData,
+  watermixerSampleData,
 };

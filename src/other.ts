@@ -1,9 +1,44 @@
-export const Devices: string[] = [
-  'alarmclock',
-  'watermixer',
-  'gate',
-  'garage',
-]
+import {AlarmclockData, alarmclockSampleData} from "./alarmclock";
+import {WatermixerData, watermixerSampleData} from "./watermixer";
+
+export interface Devices {
+  alarmclock: {
+    status: boolean;
+    data: AlarmclockData;
+    tempArray: TempArray[];
+  }
+  watermixer: {
+    status: boolean;
+    data: WatermixerData;
+  }
+}
+
+
+const HOURS_IN_DAY = 24;
+const tempArray24Hour: TempArray[] = new Array(HOURS_IN_DAY).fill(undefined);
+tempArray24Hour.map(
+  (_, index): TempArray => {
+    return {
+      unixTime: new Date(
+        new Date().getTime() - 60 * 60 * (index + 1) * 1000,
+      ).getTime(),
+      temp: 0,
+    };
+  },
+);
+
+export const devicesSample: Devices = {
+  alarmclock: {
+    status: false,
+    data: alarmclockSampleData,
+    tempArray: tempArray24Hour,
+  },
+  watermixer: {
+    status: false,
+    data: watermixerSampleData,
+  }
+}
+
 export enum LocalIpAddress {
   Alarmclock = "192.168.1.110",
   Watermixer = "192.168.1.120",
@@ -39,9 +74,3 @@ export enum OtherRequestsType {
   GET_DEVICES_STATUS = "/getDevicesStatus",
 }
 
-export interface DeviceStatus {
-  alarmclock: boolean;
-  watermixer: boolean;
-  gate: boolean;
-  garage: boolean;
-}

@@ -12,3 +12,13 @@ export interface AlarmclockHeaders {
   time: string; // formatted HH/MM/SS
   state: number; // 1 or 0
 }
+
+export const alarmclockSampleData: AlarmclockData = {
+  currentTime: "00:00:00",
+  alarmTime: "00:00:00",
+  remainingTime: "00:00:00",
+  alarmState: 0,
+  temperature: 90,
+  humidity: 100,
+  heatIndex: 90,
+}
