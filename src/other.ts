@@ -1,15 +1,22 @@
 import {AlarmclockData, alarmclockSampleData} from "./alarmclock";
 import {WatermixerData, watermixerSampleData} from "./watermixer";
+import WebSocket from 'ws';
+import { IncomingMessage } from 'http'
 
 export interface Devices {
   alarmclock: {
     status: boolean;
     data: AlarmclockData;
     tempArray: TempArray[];
+    ws: WebSocket | undefined;
+    req: IncomingMessage | undefined;
+
   }
   watermixer: {
     status: boolean;
     data: WatermixerData;
+    ws: WebSocket | undefined;
+    req: IncomingMessage | undefined;
   }
 }
 
@@ -32,10 +39,14 @@ export const devicesSample: Devices = {
     status: false,
     data: alarmclockSampleData,
     tempArray: tempArray24Hour,
+    ws: undefined,
+    req: undefined,
   },
   watermixer: {
     status: false,
     data: watermixerSampleData,
+    ws: undefined,
+    req: undefined,
   }
 }
 
