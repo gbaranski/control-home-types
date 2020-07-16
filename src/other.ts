@@ -1,4 +1,4 @@
-export const DevicesList: string[] = [
+export const Devices: string[] = [
   'alarmclock',
   'watermixer',
   'gate',
