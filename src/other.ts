@@ -7,7 +7,6 @@ export interface Devices {
   alarmclock: {
     status: boolean;
     data: AlarmclockData;
-    tempArray: TempArray[];
     ws: WebSocket | undefined;
     req: IncomingMessage | undefined;
 
@@ -21,24 +20,11 @@ export interface Devices {
 }
 
 
-const HOURS_IN_DAY = 24;
-const tempArray24Hour: TempArray[] = new Array(HOURS_IN_DAY).fill(undefined);
-tempArray24Hour.map(
-  (_, index): TempArray => {
-    return {
-      unixTime: new Date(
-        new Date().getTime() - 60 * 60 * (index + 1) * 1000,
-      ).getTime(),
-      temp: 0,
-    };
-  },
-);
 
 export const devicesSample: Devices = {
   alarmclock: {
     status: false,
     data: alarmclockSampleData,
-    tempArray: tempArray24Hour,
     ws: undefined,
     req: undefined,
   },
@@ -68,9 +54,9 @@ export enum WaterRequestType {
   START_MIXING = "/startMixing",
 }
 
-export interface TempArray {
+export interface TempHistory {
   unixTime: number;
-  temp: number;
+  temperature: number;
 }
 export interface RequestHistory {
   user: string;

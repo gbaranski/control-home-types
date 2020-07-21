@@ -6,7 +6,7 @@ import {
   LocalIpAddress,
   AlarmRequestType,
   WaterRequestType,
-  TempArray,
+  TempHistory,
   RequestHistory,
   OtherRequestsType,
 } from "./other";
@@ -19,7 +19,7 @@ export {
   AlarmRequestType,
   WaterRequestType,
   LocalIpAddress,
-  TempArray,
+  TempHistory,
   RequestHistory,
   OtherRequestsType,
   devicesSample,

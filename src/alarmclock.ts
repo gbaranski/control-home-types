@@ -18,7 +18,7 @@ export const alarmclockSampleData: AlarmclockData = {
   alarmTime: "00:00:00",
   remainingTime: "00:00:00",
   alarmState: 0,
-  temperature: 90,
-  humidity: 100,
-  heatIndex: 90,
+  temperature: 0,
+  humidity: 0,
+  heatIndex: 0,
 }
